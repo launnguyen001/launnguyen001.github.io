@@ -1,0 +1,257 @@
+/* RESET CƠ BẢN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Times New Roman', serif;
+  background: #f8f6f2;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* THANH HEADER */
+.hd-panel {
+  background: #800000;
+  color: #fff;
+  padding: 12px 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.hd-panel a {
+  color: #fff;
+  text-decoration: none;
+}
+.hd-panel a:hover{
+    color: blue;
+}
+/* MENU */
+header {
+  background: #f1ece7;
+  border-bottom: 3px solid #c49a6c;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.menu > li {
+  position: relative;
+}
+.menu > li > a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.menu > li > a:hover {
+  background: #c49a6c;
+  color: #fff;
+  border-radius: 5px;
+}
+
+/* SUBMENU */
+.submenu {
+  position: absolute;
+  display: none;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #ddd;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  z-index: 999;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.submenu li a {
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+.menu li:hover .submenu {
+  display: block;
+}
+.submenu li a:hover {
+
+  color: #f7eef4;
+  background: #c49a6c;
+}
+/* NỘI DUNG CHÍNH */
+.content {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.content h1 {
+  text-align: center;
+  color: #8b0000;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.content h2 {
+  margin-top: 30px;
+  color: #8b0000;
+  border-left: 4px solid #8b0000;
+  padding-left: 10px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content p {
+  margin-left: 15px;
+  margin-top: 8px;
+}
+
+/* ĐẢM BẢO KHÔNG XUỐNG DÒNG KHI CO TRÌNH DUYỆT */
+h1, h2, .hd-panel a, header a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Container của accordion */
+.accordion {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+/* Header (tiêu đề) của accordion */
+.accordion-header {
+    background-color: #2d2d2d;  /* giống background VS Code */
+    color: #ffffff;
+    cursor: pointer;
+    padding: 12px 16px;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: #3c3c3c; /* highlight khi hover */
+}
+
+/* Content (phần ẩn/hiện) */
+.accordion-content {
+    max-height: 0;            /* mặc định ẩn */
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #f9f9f9;
+    padding: 0 16px;
+}
+.accordion-content h1 {
+  text-align: center;
+  color: #8b0000;
+  font-size: 40px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.accordion-content h2 {
+  margin-top: 10px;
+  background: linear-gradient(90deg,rgba(196, 168, 12, 0.116), white);
+  color: #8b0000;
+  border-left: 4px solid #8b0000;
+  border-radius: 0px 5px 5px 0px;
+  padding-left: 10px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.accordion-content p {
+  margin-left: 15px;
+  margin-top: 8px;
+}
+/* Khi accordion mở */
+.accordion-content.open {
+    padding: 12px 16px;
+    max-height: 1000px; /* tùy chỉnh đủ lớn để chứa nội dung */
+}
+
+/* FOOTER */
+footer {
+  background: #2f2f2f;
+  color: #fff;
+  padding: 30px 0;
+  margin-top: 60px;
+  text-align: center;
+}
+.ft-panel {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.ft-panel .left a {
+  margin-right: 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.ft-panel .left a:hover {
+  border: 1px solid white;
+  box-shadow: 1px 2px;
+}
+.ft-panel .item a {
+  margin: 0 5px;
+  font-size: 20px;
+  color: #fff;
+  transition: 0.3s;
+}
+.ft-panel .item a:hover {
+    border: 1px solid white;
+  box-shadow: 1px 2px;
+}
+
+/* KHUNG TUYÊN BỐ CHỦ QUYỀN */
+.tag h3 {
+  color: #fff;
+  text-shadow: 0 0 6px #ff0000;
+  font-weight: bold;
+  margin: 4px 0;
+}
+.tag {
+  background: linear-gradient(45deg, #a00, #600);
+  padding: 20px 0;
+  font-size: 0.58em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+  }
+  .submenu {
+    position: static;
+  }
+  .ft-panel {
+    flex-direction: column;
+    align-items: center;
+  }
+}
