@@ -119,12 +119,12 @@ header {
   margin-top: 8px;
 }
 
-/* ĐẢM BẢO KHÔNG XUỐNG DÒNG KHI CO TRÌNH DUYỆT */
+/* ĐẢM BẢO KHÔNG XUỐNG DÒNG KHI CO TRÌNH DUYỆT 
 h1, h2, .hd-panel a, header a {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-}
+}*/
 
 /* Container của accordion */
 .accordion {
