@@ -32,6 +32,16 @@ hr{
 }
 
 /* Menu chính */
+.chat{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+.chat img{
+  max-height: 300px;
+  border-radius: 10px;
+  }
 .menu {
   display: flex;
   justify-content: center;
